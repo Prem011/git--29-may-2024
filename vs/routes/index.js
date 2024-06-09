@@ -11,10 +11,10 @@ router.get('/', function(req, res, next) {
   res.render('index');
 });
 
-
 router.get('/', function(req, res, next) {
-  const files=fs.readFileSync(gpath);
-  res.render('index', {files:files});
+  const files=fs.readdirSync(gpath,'utf-8')
+  
+  res.render('index',{files:files});
 });
 
 

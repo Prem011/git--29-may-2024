@@ -7,9 +7,9 @@ const path=require('path')
 const gpath=path.join(__dirname,'../','public','models')
 
 /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index');
-});
+// router.get('/', function(req, res, next) {
+//   res.render('index');
+// });
 
 router.get('/', function(req, res, next) {
   const files=fs.readdirSync(gpath,'utf-8')
